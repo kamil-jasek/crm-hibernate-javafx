@@ -23,6 +23,12 @@ public class HibernateUtil {
         }
     }
 
+    private HibernateUtil() {}
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
     private static void configureEntities(Configuration configuration) {
         configuration.addAnnotatedClass(TestEntity.class);
     }
