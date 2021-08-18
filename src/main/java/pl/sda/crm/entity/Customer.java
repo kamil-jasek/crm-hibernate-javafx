@@ -15,7 +15,8 @@ public abstract class Customer {
     @Id
     private UUID id;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
     private List<Address> addresses;
 
     public Customer() {
