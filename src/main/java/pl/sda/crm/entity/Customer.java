@@ -6,8 +6,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "customers")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "customer_type")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // standardowa strategia dziedziczenia
+@DiscriminatorColumn(name = "customer_type") // ustala nazwę kolumny określającą typ obiektu
 public abstract class Customer {
 
     @Id

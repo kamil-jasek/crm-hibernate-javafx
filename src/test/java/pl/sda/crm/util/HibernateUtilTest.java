@@ -16,7 +16,9 @@ class HibernateUtilTest {
         final var session = sessionFactory.openSession();
 
         // when
-        final NativeQuery<Object> query = session.createSQLQuery("SELECT 1");
+        final NativeQuery<Object> query = session.createSQLQuery("SELECT 1 as x");
+        // --> | x |
+        // --> | 1 |
         final List<Object> result = query.getResultList();
 
         // then
