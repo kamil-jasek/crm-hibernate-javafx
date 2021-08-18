@@ -1,12 +1,18 @@
 package pl.sda.crm.entity;
 
+import javax.persistence.Column;
 import java.util.Objects;
 
 import static pl.sda.crm.util.ArgumentValidator.validate;
 
 public class Pesel {
 
+    @Column(name = "pesel")
     private String value;
+
+    // for hibernate - don't use
+    private Pesel() {
+    }
 
     public Pesel(String value) {
         validate(value != null && value.matches("\\d{11}"), "pesel is invalid: " + value);

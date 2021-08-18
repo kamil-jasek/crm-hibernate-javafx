@@ -3,6 +3,7 @@ package pl.sda.crm.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import pl.sda.crm.entity.Customer;
+import pl.sda.crm.entity.Person;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -31,6 +32,7 @@ public class HibernateUtil {
 
     private static void configureEntities(Configuration configuration) {
         configuration.addAnnotatedClass(Customer.class);
+        configuration.addAnnotatedClass(Person.class);
     }
 
     private static Properties loadHibernateProperties() throws IOException {

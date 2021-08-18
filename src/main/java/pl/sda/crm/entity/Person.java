@@ -1,7 +1,9 @@
 package pl.sda.crm.entity;
 
 import javax.persistence.DiscriminatorValue;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import java.util.Objects;
 
 import static java.util.Objects.requireNonNull;
@@ -13,7 +15,13 @@ public class Person extends Customer {
 
     private String firstName;
     private String lastName;
+
+    @Embedded // pola z klasy Pesel będą zapisane wraz z polami Person w jednej tabeli
     private Pesel pesel;
+
+    // only for hibernate - don't use
+    private Person() {
+    }
 
     public Person(String firstName, String lastName, Pesel pesel) {
         validate(firstName != null && !firstName.isBlank(), "first name is invalid: " + firstName);
