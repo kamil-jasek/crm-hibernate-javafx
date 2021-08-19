@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.crm.controller.StartViewController">
    <children>
       <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRM SYSTEM" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
       <Text layoutX="38.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMIĘ" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
-      <TextField layoutX="125.0" layoutY="96.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="96.0" />
+      <TextField layoutX="125.0" layoutY="96.0" onKeyTyped="#onKeyTyped" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="96.0" />
       <TextField layoutX="125.0" layoutY="146.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="146.0" />
       <Text layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DODAJ KLIENTA FIZYCZNEGO" />
       <Text layoutX="36.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAZWISKO" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="150.0" />
@@ -17,5 +17,6 @@
       <TextField layoutX="125.0" layoutY="196.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="196.0" />
       <Button layoutX="125.0" layoutY="243.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="171.0" text="DODAJ KLIENTA" />
       <Text layoutX="21.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID UTWORZONEGO KLIENTA:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="317.0" />
+      <Text fx:id="typedName" layoutX="323.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="323.0" AnchorPane.topAnchor="100.93310546875" />
    </children>
 </AnchorPane>
