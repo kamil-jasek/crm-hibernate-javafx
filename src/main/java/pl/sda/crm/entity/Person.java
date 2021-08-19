@@ -2,10 +2,7 @@ package pl.sda.crm.entity;
 
 import pl.sda.crm.service.RegisterPersonForm;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.Objects;
 
 import static java.util.Objects.requireNonNull;
