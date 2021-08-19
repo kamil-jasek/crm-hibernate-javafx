@@ -19,5 +19,6 @@
       <Text layoutX="21.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID UTWORZONEGO KLIENTA:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="317.0" />
       <Text fx:id="customerId" layoutX="220.0" layoutY="328.06689453125" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="301.0" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="316.0" />
       <Text fx:id="errorMessage" fill="#f80000" layoutX="313.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.7294921875" AnchorPane.leftAnchor="313.0" AnchorPane.topAnchor="252.93310546875" />
+      <Button layoutX="392.0" layoutY="16.0" mnemonicParsing="false" onAction="#displayCustomerList" prefHeight="24.0" prefWidth="188.0" text="PRZEGLĄDAJ KLIENTÓW" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0" />
    </children>
 </AnchorPane>

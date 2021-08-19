@@ -2,11 +2,18 @@ package pl.sda.crm.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import pl.sda.crm.CrmApplication;
 import pl.sda.crm.service.PersonCustomerRegistration;
 import pl.sda.crm.service.RegisterPersonForm;
 import pl.sda.crm.util.HibernateUtil;
+
+import java.io.IOException;
 
 public class StartViewController {
 
@@ -26,9 +33,11 @@ public class StartViewController {
     private Text errorMessage;
 
     private final PersonCustomerRegistration registration;
+    private final SceneLoader sceneLoader;
 
     public StartViewController() {
         this.registration = new PersonCustomerRegistration(HibernateUtil.getSessionFactory());
+        this.sceneLoader = new SceneLoader();
     }
 
     @FXML
@@ -53,5 +62,10 @@ public class StartViewController {
         } catch (Exception ex) {
             errorMessage.setText(ex.getMessage());
         }
+    }
+
+    @FXML
+    public void displayCustomerList(ActionEvent event) throws IOException {
+        sceneLoader.loadOnEvent("customer-list-view.fxml", event);
     }
 }
